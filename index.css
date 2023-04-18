@@ -2,7 +2,6 @@
     --dark-blue: #1F2937;
     --green: #4ADF86;
     --med-blue: #2F3E53;
-    --glow: 3px 3px 10px rgba(85, 249, 145, 0.2);
 }
 
 body {
@@ -31,7 +30,6 @@ body {
 
 .header-container span {
     color: var(--green);
-    text-shadow: var(--glow);
 }
 
 .header-container p {
@@ -39,14 +37,21 @@ body {
 }
 
 .header-container button {
-    background-color: var(--green);
+    background-color: #2fa35d;
     border: none;
     color: #FFF;
     padding: 10px 20px;
     border-radius: 6px;
     margin: 35px 0;
     font-size: 18px;
-    box-shadow: var(--glow);
+}
+
+.header-container button:hover {
+    box-shadow: 3px 3px 10px rgba(85, 249, 145, 0.3);
+}
+
+.header-container button:active {
+    box-shadow: 3px 3px 5px rgba(85, 249, 145, 0.3);
 }
 
 .password-container {
