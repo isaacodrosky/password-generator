@@ -9,23 +9,21 @@ const password2El = document.getElementById("password-2-el");
 
 
 function generatePasswords() {
-    // check that there are no current passwords generated
-    if (password1El.textContent === "" && password2El.textContent === "") {
-        // generate password 2
-        for (let i = 0; i < 15; i++) {
-            let randomIndex = Math.floor(Math.random() * characters.length);
-            let randomCharacter = characters[randomIndex];
-            password1El.textContent += randomCharacter;
-        }
-        // generate password 2 
-        for (let i = 0; i < 15; i++) {
-            let randomIndex = Math.floor(Math.random() * characters.length);
-            let randomCharacter = characters[randomIndex];
-            password2El.textContent += randomCharacter;
-        }
+    // reset displayed values
+    password1El.textContent = "";
+    password2El.textContent = "";
+    // generate password 1
+    for (let i = 0; i < 15; i++) {
+        let randomIndex = Math.floor(Math.random() * characters.length);
+        let randomCharacter = characters[randomIndex];
+        password1El.textContent += randomCharacter;
     }
+    // generate password 2 
+    for (let i = 0; i < 15; i++) {
+        randomIndex = Math.floor(Math.random() * characters.length);
+        randomCharacter = characters[randomIndex];
+        password2El.textContent += randomCharacter;
+       }
 }
-
-// event listeners
 
 generateBtn.addEventListener("click", generatePasswords);
