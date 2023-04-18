@@ -1,5 +1,8 @@
 :root {
+    --dark-blue: #1F2937;
     --green: #4ADF86;
+    --med-blue: #2F3E53;
+    --glow: 3px 3px 10px rgba(85, 249, 145, 0.2);
 }
 
 body {
@@ -8,8 +11,8 @@ body {
 }
 
 .container {
-    background-color: #1F2937;
-    max-width: 80%;
+    background-color: var(--dark-blue);
+    max-width: 550px;
     margin: 20px auto;
     padding: 80px 40px;
 }
@@ -19,7 +22,7 @@ body {
     color: #FFF;
     max-width: 90%;
     margin: 0 auto;
-    border-bottom: solid 1px #2F3E53;
+    border-bottom: solid 1px var(--med-blue);
 }
 
 .header-container h1 {
@@ -28,6 +31,7 @@ body {
 
 .header-container span {
     color: var(--green);
+    text-shadow: var(--glow);
 }
 
 .header-container p {
@@ -42,11 +46,12 @@ body {
     border-radius: 6px;
     margin: 35px 0;
     font-size: 18px;
+    box-shadow: var(--glow);
 }
 
 .password-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
     max-width: 90%;
     margin: 20px auto;
@@ -56,7 +61,7 @@ body {
     font-family: Inter, sans-serif;
     color: var(--green);
     text-align: center;
-    background-color: #2F3E53;
+    background-color: var(--med-blue);
     padding: 8px;
     border-radius: 6px;
     height: 30px;
