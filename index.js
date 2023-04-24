@@ -6,6 +6,8 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O",
 const generateBtn = document.getElementById("generate-btn");
 const password1El = document.getElementById("password-1-el");
 const password2El = document.getElementById("password-2-el");
+const lengthEl = document.getElementById("length-el");
+const lengthValue = document.getElementById("length-value");
 
 
 function generatePasswords() {
@@ -15,12 +17,19 @@ function generatePasswords() {
 
 function createPassword() {
     let password = "";
-    for (let i = 0; i < 15; i++) {
-        let randomIndex = Math.floor(Math.random() * characters.length);
-        let randomCharacter = characters[randomIndex];
+    const length = lengthEl.value;
+    for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * characters.length);
+        const randomCharacter = characters[randomIndex];
         password += randomCharacter;
     }
     return password;
 }
 
+// show selected length value next to slider
+function displayLength() {
+    lengthValue.textContent = lengthEl.value;
+}
+
 generateBtn.addEventListener("click", generatePasswords);
+lengthEl.addEventListener("change", displayLength);

@@ -36,6 +36,10 @@ body {
     font-size: 20px;
 }
 
+.header-container input {
+    margin-top: 10px;
+}
+
 .header-container button {
     background-color: #2fa35d;
     border: none;
